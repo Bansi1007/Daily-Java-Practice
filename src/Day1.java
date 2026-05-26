@@ -1,4 +1,4 @@
-public class Day1_1{
+public class Day1 {
 
     //Print your name, your city, and your age — each on its own line.
     public static void main(String[] args) {
