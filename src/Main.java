@@ -5,5 +5,6 @@ void main() {
   // to see how IntelliJ IDEA suggests fixing it.
   IO.println(String.format("Hello and welcome!"));
   Day1 day1 = new Day1();
+  Day2 day2 = new Day2();
 
 }
