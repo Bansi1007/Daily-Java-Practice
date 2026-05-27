@@ -1,4 +1,4 @@
-public class Day1_1{
+public class Day1 {
 
     //Print your name, your city, and your age — each on its own line.
     public static void main(String[] args) {
@@ -33,11 +33,12 @@ public class Day1_1{
 
     //Store your favourite movie title in a String. Print it. Then change it to a different movie and print again.
     public static void Q5(){
-        String movie_title ="Dhurandhar";
-        System.out.println(movie_title);
-        movie_title  ="Harry Potter";
-        System.out.println(movie_title);
+        String movieTitle ="Dhurandhar";
+        System.out.println(movieTitle);
+        movieTitle  ="Harry Potter";
+        System.out.println(movieTitle);
 
     }
 
 }
+
