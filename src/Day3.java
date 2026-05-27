@@ -4,7 +4,7 @@ public class Day3 {
 
     public static void main(String[] args) {
 
-       // Q1();Q2();Q3();Q4();Q5();
+        Q1();Q2();Q3();Q4();Q5();
         Q6();
     }
 
