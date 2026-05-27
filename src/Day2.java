@@ -30,20 +30,20 @@ public class Day2 {
 
     //Convert a temperature of 37 degrees Celsius to Fahrenheit and print the result.
     public static void Q3() {
-        double C_temp=37;
-        double F_temp= C_temp * 9 / 5.0 + 32;
-        System.out.println("37 degrees Celsius to Fahrenheit temperature = " + F_temp);
+        double cTemp=37;
+        double fTemp= cTemp * 9 / 5.0 + 32;
+        System.out.println("37 degrees Celsius to Fahrenheit temperature = " + fTemp);
 
     }
     //A shop offers a 15% discount on a product priced at Rs. 2000. Calculate and print the discount amount and the final price.
     public static void Q4() {
-        int initial_price= 2000;
-        double discount_amount=0.15*initial_price;
-        double final_price= initial_price - discount_amount ;
+        int initialPrice= 2000;
+        double discountAmount=0.15*initialPrice;
+        double finalPrice= initialPrice - discountAmount ;
 
-        System.out.println("Initial price = " + initial_price);
-        System.out.println("Discount price = " + discount_amount);
-        System.out.println("Final price = " + final_price);
+        System.out.println("Initial price = " + initialPrice);
+        System.out.println("Discount price = " + discountAmount);
+        System.out.println("Final price = " + finalPrice);
 
     }
     //You drive 350 km on 25 litres of petrol. Calculate and print the mileage (km per litre).
