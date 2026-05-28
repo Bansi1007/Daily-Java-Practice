@@ -19,7 +19,6 @@ public class Day4 {
         System.out.println("Hello " + name);
     }
 
-    //Q2
     //Ask the user for two whole numbers. Print their sum, difference, and product.
     public static void Q2() {
         Scanner sc = new Scanner(System.in);
