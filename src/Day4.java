@@ -2,7 +2,7 @@ import java.time.Year;
 import java.util.Scanner;
 
 public class Day4 {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         Q1();
         Q2();
         Q3();
@@ -40,12 +40,10 @@ public class Day4 {
         System.out.println("enter your  birth year : ");
         int year = sc.nextInt();
         int currentYear = Year.now().getValue();
-        ;
         int difference = currentYear - year;
         System.out.println("You are " + difference + " years old");
     }
 
-    //Q4
     //Ask the user for the price of an item and a discount percentage. Calculate and print the final price after the discount.
     public static void Q4() {
         Scanner sc = new Scanner(System.in);
