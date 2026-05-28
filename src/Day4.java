@@ -34,7 +34,6 @@ public class Day4 {
         System.out.println(number2 * number1);
     }
 
-    //Q3
     //Ask the user for their birth year. Calculate how old they are (assume current year is 2025) and print it.
     public static void Q3(){
         Scanner sc=new Scanner(System.in);
