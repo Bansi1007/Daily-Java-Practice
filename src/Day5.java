@@ -52,7 +52,6 @@ public class Day5 {
         //decimal part is not rounding. casting from double to int removes decimal part.
     }
 
-    //Q5
     //Ask the user for a price as a String (like they typed it in a form).
     // Convert it to a double, apply 18% GST, and print the price before and after GST formatted to 2 decimal places.
     public static void Q5() {
