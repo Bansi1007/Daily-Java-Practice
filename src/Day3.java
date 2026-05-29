@@ -15,7 +15,6 @@ public class Day3 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter name = ");
         String name = sc.nextLine();
-
         System.out.println("You entered: " + name.toUpperCase());
         System.out.println("lower case " + name.toLowerCase());
         System.out.println("number of characters: " + name.length());
