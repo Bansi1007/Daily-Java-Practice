@@ -36,7 +36,6 @@ public class Day8 {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the number");
         int n = 0;
-
         try {
             n = Integer.parseInt(input.nextLine());
         } catch (Exception var4) {
@@ -49,7 +48,6 @@ public class Day8 {
         for (int i = 1; i <= n; ++i) {
             sum += i;
         }
-
         System.out.println(sum);
     }
 
@@ -57,7 +55,6 @@ public class Day8 {
         for (int i = 10; i > 0; --i) {
             System.out.println(i);
         }
-
         System.out.println("Blast off!");
     }
 }
