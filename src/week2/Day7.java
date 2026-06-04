@@ -92,10 +92,10 @@ public class Day7 {
                 System.out.println("Invalid month");
         }
     }
+
     //Q3
     //Ask the user to enter a season ('summer', 'winter', 'monsoon', 'spring').
     // Use switch to print one activity to do in that season. Print 'Unknown season' for anything else.
-
     static void seasonOfMonth() {
         System.out.println("Enter a season : 'summer', 'winter', 'monsoon', 'spring'");
         String season = input.next();
