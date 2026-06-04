@@ -10,6 +10,8 @@ public class Day9 {
         multiplicationTable();
     }
 
+    static Scanner sc = new Scanner(System.in);
+
     //Q1
     //Print all numbers from 1 to 50 that are divisible by both 3 and 5.
     static void divisibleNumbers() {
@@ -26,7 +28,6 @@ public class Day9 {
         int numberLength = 5;
         int sum = 0;
         for (int i = 1; i <= numberLength; i++) {
-            Scanner sc = new Scanner(System.in);
             System.out.print("Enter a number " + i + " = ");
             try {
                 sum += sc.nextInt();
@@ -44,7 +45,6 @@ public class Day9 {
         int maxNumber = 0;
         int enteredNumber = 0;
         for (int i = 1; i <= 5; i++) {
-            Scanner sc = new Scanner(System.in);
             System.out.print("Enter a number " + i + " = ");
             try {
                 enteredNumber = Integer.parseInt(sc.next());
@@ -60,7 +60,6 @@ public class Day9 {
 
     //    Ask the user for their name. Count and print how many vowels (a, e, i, o, u) are in it.
     static void findVowels() {
-        Scanner sc = new Scanner(System.in);
         System.out.print("Enter your name ");
         String name = sc.nextLine().toLowerCase();
         int vowelCount = 0;
