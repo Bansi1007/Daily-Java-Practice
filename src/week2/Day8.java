@@ -3,9 +3,6 @@ package week2;
 import java.util.Scanner;
 
 public class Day8 {
-    public Day8() {
-    }
-
     static void main(String[] args) {
         numberPerLine();
         evenNumber();
