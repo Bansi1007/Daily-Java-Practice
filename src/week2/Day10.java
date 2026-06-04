@@ -1,6 +1,7 @@
 package week2;
 import java.util.Scanner;
 
+import static week2.MyProjectNameConstants.DONE;
 import static week2.MyProjectNameConstants.PIN;
 public class Day10 {
     static void main(String[] args) {
@@ -33,7 +34,6 @@ public class Day10 {
             } else if (userEnteredNumber > guessNumber) {
                 System.out.println("Too high");
                 System.out.println("\nTry again : ");
-
             } else {
                 System.out.println("Correct!");
             }
@@ -56,10 +56,10 @@ public class Day10 {
             }
             if (userEnteredNumber <= 0) {
                 System.out.println("negative");
-                System.out.println("\nTry again : ");
+                System.out.println("Try again : ");
             }
         }
-        System.out.printf("You entered: " + userEnteredNumber);
+        System.out.println("You entered: " + userEnteredNumber);
     }
 
     //Q3
@@ -69,14 +69,14 @@ public class Day10 {
         int userEnteredNumber = 0;
         int attempt = 3;
 
-        while (attempt > 0 && userEnteredNumber != PIN) {
+        while (attempt > 0 && userEnteredNumber != Integer.parseInt(PIN)) {
             System.out.println("Enter PIN number: ");
             try {
                 userEnteredNumber = Integer.parseInt(sc.nextLine());
             } catch (Exception e) {
                 System.out.println("Enter valid number: ");
             }
-            if (userEnteredNumber != PIN) {
+            if (userEnteredNumber != Integer.parseInt(PIN)) {
                 attempt--;
                 System.out.println("Wrong PIN, " + attempt + "attempt left");
             } else {
@@ -94,10 +94,9 @@ public class Day10 {
     // After they type 'done', print how many words they entered (not counting 'done').
     static void wordCount() {
         String userEnteredWord = "";
-        String done = "done";
         int count = 0;
         System.out.println("Enter words: ");
-        while (!userEnteredWord.equals(done)) {
+        while (!userEnteredWord.equals(DONE)) {
             try {
                 userEnteredWord = String.valueOf(sc.nextLine());
                 if (userEnteredWord.matches("^[a-zA-Z]+$")) {
@@ -108,7 +107,7 @@ public class Day10 {
                 sc.close();
                 return;
             }
-            if (userEnteredWord.equals(done)) {
+            if (userEnteredWord.equals(DONE)) {
                 count--;
             }
         }
