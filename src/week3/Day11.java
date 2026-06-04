@@ -48,8 +48,7 @@ public class Day11 {
         return cost;
     }
 
-
-//    Write a method called printSeparator() that prints a line of 30 dashes.
+//    Write a method called printSeparator() that prints line of 30 dashes.
 //    Call it before and after printing a title to make it look like a header.
     static void printSeparator(){
         for (int i = 1; i <= 30; i++) {
