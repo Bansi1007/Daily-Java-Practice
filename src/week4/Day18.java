@@ -86,40 +86,45 @@ public class Day18 {
         int choice = 0;
         String task = null;
         int number = 0;
-        System.out.println("-------1) add a new task ------2) mark task as done------3)view all tasks");
-        System.out.println("Select one option:    ");
+
         while (!list.isEmpty()) {
+            System.out.println("-------1) add a new task ------2) mark task as done------3)view all tasks");
+            System.out.println("Select one option:    ");
             try {
                 choice = Integer.parseInt(sc.nextLine());
             } catch (Exception e) {
-                System.out.println("Invalid input");
+                System.out.println("Invalid input,Pls enter number");
+                continue;
             }
             switch (choice) {
                 case 1:
                     System.out.println("Add task here---");
-                    try {
-                        task = sc.nextLine();
-                    } catch (Exception e) {
-                        System.out.println("Invalid input");
-                    }
+                    task = sc.nextLine();
                     list.add(task);
                     System.out.println("task added to the list---" + list);
                     break;
                 case 2:
+                    System.out.println("Current list---" + list);
                     System.out.println("mark a task as done by entering its number");
                     try {
                         number = Integer.parseInt(sc.nextLine());
                     } catch (Exception e) {
                         System.out.println("Invalid input");
+                        break;
                     }
-                    while (list.size()>=0 &&number<list.size()) {
+                    if (number >= 1 || number <= list.size()) {
                         list.remove(number - 1);
                         System.out.println("task marked as done and removed from the list----" + list);
-                    }System.out.println("No task in list");
+                    } else {
+                        System.out.println("No task in list");
+                    }
 
                     break;
                 case 3:
                     System.out.println("Here is list of all tasks ---" + list);
+                    break;
+                default:
+                    System.out.println("Invalid input");
                     break;
             }
         }
