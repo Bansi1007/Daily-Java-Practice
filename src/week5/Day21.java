@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 class Day21 {
     public static void main(String[] args) {
-        //  Q1();
-        // Q2();
-        //Q3();
-        //Q4();
+        Q1();
+        Q2();
+        Q3();
+        Q4();
         Q5();
     }
 
