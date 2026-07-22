@@ -8,8 +8,11 @@ public class Day25 {
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-       // studentReportCard();
+        studentReportCard();
         expenseTracker();
+        numberGuessingGame();
+        librarySystem();
+        marksManager();
     }
 
 //Q1
@@ -63,11 +66,11 @@ public class Day25 {
     //Build an expense tracker. Keep asking the user to enter a category and an amount (e.g. 'Food 250').
     // Store in a HashMap where the value is the total spent per category.
     // Stop when they type 'done'. Print the full breakdown and grand total.
-    public static void expenseTracker(){
+    public static void expenseTracker() {
         String userEnteredWord = "Your expense tracker ";
         HashMap<String, Integer> expences = new HashMap<>();
         while (!userEnteredWord.equals("done")) {
-            String category ="";
+            String category = "";
             Integer amount = 0;
             try {
                 System.out.print("enter next category : ");
@@ -89,5 +92,115 @@ public class Day25 {
         System.out.println("Expenses: " + expences);
         System.out.println("Total amount of expences : " + expences.entrySet().stream().mapToInt(Map.Entry::getValue).sum());
 
+    }
+
+    //Build a number guessing game. Hardcode the secret number as 42. Ask the user to guess.
+    // Print 'Too low', 'Too high', or 'Correct!'. Count how many guesses they took and print it when they win.
+    static void numberGuessingGame() {
+        int secretNumber = 42;
+        int userGuessedNumber = 0;
+        int count = 0;
+        while (userGuessedNumber != 42) {
+            try {
+                System.out.print("Enter guess number : ");
+                userGuessedNumber = Integer.parseInt(input.nextLine());
+                if (userGuessedNumber == secretNumber) {
+                    System.out.println("Correct!");
+                    break;
+                } else if (userGuessedNumber > secretNumber) {
+                    System.out.println("too high");
+                    count++;
+                } else {
+                    System.out.println("too low");
+                    count++;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Enter valid number: ");
+            }
+        }
+        System.out.println("You won!....." + count + " guesses taken.....");
+    }
+
+    //Build a mini library system. Store 5 book titles in an ArrayList and their authors in a HashMap (title → author).
+    // Let the user: search for a book by title (print the author if found), and add a new book. Wrap lookups in try/catch.
+    static void librarySystem() {
+        ArrayList<String> title = new ArrayList<>();
+        title.add("Library");
+        title.add("Programming");
+        title.add("Mathematics");
+        title.add("lifestyle");
+        title.add("cooking");
+        title.add("sports");
+        System.out.println(title);
+
+        HashMap<String, String> author = new HashMap<>();
+        author.put("Library", "bansi");
+        author.put("Programming", "dishit");
+        author.put("Mathematics", "carney");
+        author.put("lifestyle", "shakira");
+
+        try {
+            System.out.println("Search book by title..");
+            String searchTitle = input.nextLine();
+            if (author.containsKey(searchTitle)) {
+                System.out.println("author name = " + author.get(searchTitle));
+            } else {
+                System.out.println("No such title");
+            }
+            System.out.println("add a new book...");
+            String newTitle = input.nextLine();
+            System.out.println("add a new author...");
+            String newAuthor = input.nextLine();
+            title.add(newTitle);
+            author.put(newTitle, newAuthor);
+        } catch (Exception e) {
+            System.out.println("Invalid input");
+        }
+        System.out.println(author);
+    }
+
+
+    //Build a marks manager using HashMap. Show a menu in a loop: 1. Add a student 2. View all students and marks
+    // 3. Find the highest scorer 4. Find the average mark 5. Quit Keep running until the user chooses 5.
+    static void marksManager() {
+        HashMap<String, Integer> marks = new HashMap<>();
+        marks.put("bansi", 90);
+        marks.put("Bella", 50);
+        marks.put("Chaya", 40);
+        marks.put("Dhara", 100);
+        boolean running = true;
+        while (running) {
+            System.out.println(" 1. Add a student 2. View all students and marks\n" +
+                    "    // 3. Find the highest scorer 4. Find the average mark 5. Quit ");
+            int choice = input.nextInt();
+            input.nextLine();
+            switch (choice) {
+                case 1:
+                    try {
+                        System.out.println("Enter student name : ");
+                        String name = input.nextLine();
+                        System.out.println("Enter marks for subject : ");
+                        Integer mark = input.nextInt();
+                        input.nextLine();
+                        marks.put(name, mark);
+                        break;
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
+                case 2:
+                    System.out.println(marks);
+                    break;
+                case 3:
+                    System.out.println("highest score : " + marks.entrySet().stream().max(Comparator.comparingInt(Map.Entry::getValue)).get().getKey());
+                    break;
+                case 4:
+                    System.out.println("avg marks : " + marks.entrySet().stream().mapToInt(Map.Entry::getValue).average());
+                    break;
+                case 5:
+                    System.out.println("quit");
+                    running = false;
+                    break;
+            }
+        }
     }
 }
