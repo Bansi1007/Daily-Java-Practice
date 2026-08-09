@@ -8,12 +8,12 @@ public class Day26 {
    static Account account = new Account(200,90);
     public static void main(String[] args) {
         int[] finaltotal = {1,100,500,25};
-        //totalListOfAmount(finaltotal);
-        // returnLargestValue(finaltotal);
+        totalListOfAmount(finaltotal);
+        returnLargestValue(finaltotal);
         String[] lists={"cad","usd","inr"};
         String target = "inr";
-       // numofOccurance(lists,target);
-        //reverseString("Bansi");
+        numofOccurance(lists,target);
+        reverseString("Bansi");
         List<Integer> numbers =  Arrays.asList(100,900,60000,10000,350);
         newList(numbers);
         account.deposit(100);
