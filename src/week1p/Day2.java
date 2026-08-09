@@ -1,18 +1,25 @@
 package week1p;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Day2 {
     static void main(String[] args) {
-        String s = "anagram";
+       /* String s = "anagram";
         String t = "nagaram";
         AnagramEasy(s, t);
 
         String[] strarr = new String[]{"flower", "flow", "flight"};
-        longestCommonPrefix(strarr);
+        longestCommonPrefix(strarr);*/
+
+        Set<overrideOnlyEquals>broken = new HashSet<>();
+        broken.add(new overrideOnlyEquals("Key"));
+        broken.add(new overrideOnlyEquals("Key"));
+        System.out.println("broken----"+broken.size());
+
+        Set<overrideEqualsAndHashCode>fixed = new HashSet<>();
+        fixed.add(new overrideEqualsAndHashCode("Key"));
+        fixed.add(new overrideEqualsAndHashCode("Key"));
+        System.out.println("fixed---"+fixed.size());
     }
 
   /*  Valid AnagramEasy
@@ -65,6 +72,31 @@ public class Day2 {
         System.out.println("time complexity - o(n)-----space - o(1)");
         System.out.println(prefix);
         return prefix;
+    }
+
+}
+class overrideOnlyEquals {
+    String value;
+    public overrideOnlyEquals(String value) {
+        this.value = value;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        return obj instanceof overrideOnlyEquals && this.value == ((overrideOnlyEquals) obj).value;
+    }
+}
+class overrideEqualsAndHashCode {
+    String value;
+    public overrideEqualsAndHashCode(String value) {
+        this.value = value;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        return obj instanceof overrideEqualsAndHashCode && this.value == ((overrideEqualsAndHashCode) obj).value;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(value);
     }
 }
 
