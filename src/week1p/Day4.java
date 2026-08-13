@@ -2,6 +2,7 @@ package week1p;
 
 import java.util.Stack;
 
+
 public class Day4 {
     static void main(String[] args) {
         bracketsCheck("[{()}]");
@@ -11,6 +12,7 @@ public class Day4 {
         s.push(40);
         s.push(15);
         System.out.println(s.getMin());
+        isPalindrome("anAd");
 
     }
 
@@ -38,6 +40,26 @@ public class Day4 {
         }
         System.out.println("true");
         return stack.isEmpty();
+    }
+
+    // Decide whether a string reads the same forwards and backwards, ignoring case and anything that is not a letter or digit.
+
+    public static boolean isPalindrome(String str) {
+
+        if (str.isBlank() ||str==null) {
+            System.out.println("enter valid string");
+            return false;
+        }
+        String cleaned = str.replaceAll(" ", "").toLowerCase();
+        StringBuilder sb = new StringBuilder(cleaned);
+        String reversed = sb.reverse().toString();
+        if (reversed.equals(cleaned)) {
+            System.out.println("Ta-da.....string is palindrome");
+            return true;
+        }
+
+        System.out.println("oopsie.....string is not palindrome");
+        return false;
     }
 
 
