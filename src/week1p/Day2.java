@@ -4,12 +4,12 @@ import java.util.*;
 
 public class Day2 {
     static void main(String[] args) {
-       /* String s = "anagram";
+        String s = "anagram";
         String t = "nagaram";
         AnagramEasy(s, t);
 
         String[] strarr = new String[]{"flower", "flow", "flight"};
-        longestCommonPrefix(strarr);*/
+        longestCommonPrefix(strarr);
 
         Set<overrideOnlyEquals>broken = new HashSet<>();
         broken.add(new overrideOnlyEquals("Key"));

@@ -6,7 +6,7 @@ import java.util.*;
 public class Day3 {
     static void main(String[] args) {
         int[] nums = new int[] {1,2,3};
-        //checkDuplicates(nums);
+        checkDuplicates(nums);
         String[] words = new String[] {"eat", "tea", "tan", "ate", "nat", "bat"};
         groupAnagramString(words);
     }

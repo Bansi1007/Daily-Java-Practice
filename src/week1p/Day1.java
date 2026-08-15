@@ -36,7 +36,7 @@ public class Day1 {
         }
         System.out.println(
                 "Complexity. Time O(n), space O(1)");
-        System.out.println(best);
+        System.out.println("best---"+best);
         return best;
     }
 
