@@ -23,6 +23,7 @@ public class Day1 {
         return new int[]{-1, -1};
     }
 
+
     //Given daily prices, find the maximum profit from buying on one day and selling on a later day. If no profit is possible, return 0.
     public static int maxProfit(int[] prices) {
         int best = 0;

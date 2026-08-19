@@ -30,6 +30,7 @@ public class Day26 {
         return total;
     }
 
+
     //Return the largest value in an int[]. Decide what your method does when the array is empty, and say why.
     public static void returnLargestValue(int[] list){
         int largest=0;

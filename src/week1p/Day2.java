@@ -49,6 +49,7 @@ public class Day2 {
         return true;
     }
 
+
 /*
     Find the longest starting string shared by every string in an array. Return an empty string if there is none.
 
