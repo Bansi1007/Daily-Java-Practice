@@ -20,7 +20,15 @@ public class Day8 {
 
     public int[] topKFrequentElements(int[] arr, int k) {
 
-        return Arrays.stream(arr).boxed().collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().stream().sorted((a, b) -> b.getValue().compareTo(a.getValue())).limit(k).mapToInt(Map.Entry::getKey).toArray();
+        return Arrays.stream(arr)
+                .boxed()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet()
+                .stream()
+                .sorted((a, b) -> b.getValue().compareTo(a.getValue()))
+                .limit(k)
+                .mapToInt(Map.Entry::getKey)
+                .toArray();
     }
 
     //Sort an array containing only 0, 1 and 2 in a single pass without a library sort.
