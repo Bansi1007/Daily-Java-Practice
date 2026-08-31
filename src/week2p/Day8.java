@@ -30,6 +30,17 @@ public class Day8 {
                 .mapToInt(Map.Entry::getKey)
                 .toArray();
     }
+    /*
+    *"I implemented this using Java Streams to prioritize declarative, " +
+            "highly readable code.First, I stream the array, box the primitives," +
+            " and use a groupingBy collector combined with Collectors.counting() to build a frequency map of the elements in a single pass." +
+            "Next, I stream the map's entry set and sort it in descending order based on the frequency values using a custom comparator." +
+            " Finally, I apply .limit(k) to short-circuit and grab only the top K items, map them back to their integer keys," +
+            " and collect them into the final primitive array.In terms of complexity:Time Complexity: This runs in \(O(N \log N)\) time " +
+            "because sorting the entry set dominates the runtime, " +
+            "where N is the number of unique elements.Space Complexity: It takes O(N) space to store the frequencies in the map.*/
+
+
 
     //Sort an array containing only 0, 1 and 2 in a single pass without a library sort.
     //Example. [2,0,2,1,1,0] -> [0,0,1,1,2,2]
