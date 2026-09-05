@@ -20,7 +20,17 @@ Example. 1 -> 2 -> 3 -> null becomes 3 -> 2 -> 1 -> null*/
       and \(\mathcal{O}(1)\) auxiliary space since we are updating the links in place without allocating any new memory.
       It also naturally handles edge cases like an empty list or a list with a single node."*/
 
-
+    public ListNode reverseList(ListNode head){
+        ListNode prev = null;
+        ListNode curr = head;
+        while (curr != null){
+            ListNode next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        return prev;
+    }
 
 
     /*Merge Two Sorted Lists
@@ -33,17 +43,7 @@ Example. 1 -> 3 -> 5 and 2 -> 4 -> 1 -> 2 -> 3 -> 4 -> 5*/
         ListNode head;
         ListNode(int val) { this.val = val; }
     }
-    public ListNode reverseList(ListNode head){
-        ListNode prev = null;
-        ListNode curr = head;
-        while (curr != null){
-            ListNode next = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = next;
-        }
-        return prev;
-    }
+
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2){
         ListNode dummy = new ListNode(0);
