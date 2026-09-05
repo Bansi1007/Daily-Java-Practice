@@ -53,8 +53,7 @@ private ListNode reverse(ListNode node) {
 
             Example. [4,2,7,1,3,6,9] -> [4,7,2,9,6,3,1]*/
 // Source - https://stackoverflow.com/a/3522481
-// Posted by jjnguy, modified by community. See post 'Timeline' for change history
-// Retrieved 2026-09-05, License - CC BY-SA 3.0
+
    public class TreeNode<T> {
        public T data;             // The value stored in the node
        public TreeNode<T> left;   // Reference to the left child
